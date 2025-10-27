@@ -1,7 +1,7 @@
 document.getElementById("navbar").innerHTML = `
   <nav class="nav-container">
     <div class="logo">
-      <img src="images/logo.png" alt="Zombie Survival Logo">
+      <img src="images/hand-gun-logo.png" alt="Zombie Survival Logo">
     </div>
     <ul class="nav-links">
       <li><a href="index.html">Home</a></li>
