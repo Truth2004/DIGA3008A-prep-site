@@ -97,7 +97,7 @@
 .kits {
   position: relative;
   z-index: 2;
-  background: url("/images/concrete-background.jpeg") center/cover no-repeat;
+  background: url("../images/concrete-background.jpeg") center/cover no-repeat;
   padding: 3rem 2rem;
   text-align: center;
 }
