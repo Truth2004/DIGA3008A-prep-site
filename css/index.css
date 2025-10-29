@@ -27,19 +27,21 @@ nav {
 }
 
 .logo img {
-  height: 40px;
+  height: 60px;
 }
 
 .nav-links {
   display: flex;
-  gap: 1.5rem;
+  gap: 2rem;
   list-style: none;
 }
 
 .nav-links a {
   text-decoration: none;
   color: #f5f5f5;
-  font-weight: 500;
+  font-weight: 600;
+  font-size: 1.8rem;
+  padding: 0.5rem 0;
   transition: color 0.3s;
 }
 
@@ -154,21 +156,30 @@ nav {
   justify-content: center;
   align-items: center;
   color: #fff;
-  padding: 1rem;
-  gap: 3rem;
+  padding: 3rem 2rem;
+  gap: 4rem;
   text-align: center;
   flex-wrap: wrap;
 }
 
+.stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
 .stat p {
-  font-size: 1.2rem;
+  font-size: 2rem;
   font-weight: bold;
   color: #e0a400;
+  margin: 0 0 0.5rem 0;
 }
 
 .stat span {
-  font-size: 0.8rem;
+  font-size: 1rem;
   letter-spacing: 1px;
+  text-transform: uppercase;
 }
 
 /* ===== KITS SECTION ===== */
@@ -179,7 +190,6 @@ nav {
   padding: 3rem 2rem;
   text-align: center;
 }
-
 
 .kits::before {
   content: "";
@@ -199,7 +209,7 @@ nav {
 }
 
 .kits p {
-  font-size: 0.95rem;
+  font-size: 1.25rem;
   max-width: 700px;
   margin: 0 auto 2rem;
   color: #ddd;
@@ -208,46 +218,78 @@ nav {
 
 .kit-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
   margin-top: 2rem;
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .kit-card {
   background: #3a3a3a;
-  border-radius: 10px;
+  border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
-  transition: transform 0.3s;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .kit-card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
 }
 
 .kit-card img {
   width: 100%;
-  height: 200px;
+  height: 250px;
   object-fit: cover;
 }
 
 .kit-card h3 {
-  margin: 0.8rem 0 0.4rem;
+  margin: 1.2rem 0 0.6rem;
   color: #fff;
+  font-size: 1.4rem;
 }
 
 .kit-card p {
-  font-size: 0.9rem;
-  padding: 0 1rem 1rem;
+  font-size: 1rem;
+  padding: 0 1.2rem 1.2rem;
   color: #ccc;
+  line-height: 1.6;
 }
 
-/* ===== FOOTER ===== */
+/* ===== SIMPLIFIED RESPONSIVE DESIGN ===== */
+@media screen and (max-width: 768px) {
+  .kits {
+    padding: 2rem 1.5rem;
+  }
+  
+  .kit-grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+  }
+  
+  .kit-card img {
+    height: 200px;
+  }
+  
+  .kit-card h3 {
+    font-size: 1.2rem;
+  }
+  
+  .kit-card p {
+    font-size: 0.9rem;
+  }
+}
+
+/* ====== FOOTER FIX ====== */
 footer {
   background: #111;
-  color: #aaa;
+  color: #fff;
   text-align: center;
-  padding: 1rem 0;
-  font-size: 0.8rem;
-  letter-spacing: 0.5px;
+  padding: 2rem 1rem;
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  margin-top: auto; /* ensures it sits below content */
 }
