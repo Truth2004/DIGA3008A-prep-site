@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
   const counters = document.querySelectorAll(".stat p");
-  const duration = 12000; // 5 seconds
+  const duration = 15000; // 5 seconds
   const frameRate = 60;  // 60 frames per second
   let started = false;   // to prevent re-triggering
 
