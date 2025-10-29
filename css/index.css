@@ -105,8 +105,8 @@
 /* Make it responsive */
 @media (max-width: 768px) {
   .stat-icon {
-    width: 24px;
-    height: 24px;
+    width: 15px;
+    height: 15px;
   }
 
   .stat p {
