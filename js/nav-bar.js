@@ -3,7 +3,8 @@ const pathPrefix = location.pathname.includes("/") && !location.pathname.endsWit
 document.getElementById("navbar").innerHTML = `
   <nav class="nav-container">
     <div class="logo">
-      <img src="${pathPrefix}images/hand-gun-logo.png" alt="Zombie Survival Logo">
+      
+      <img src="/images/hand-gun-logo.png">
     </div>
     <ul class="nav-links">
       <li><a href="${pathPrefix}index.html">Home</a></li>
