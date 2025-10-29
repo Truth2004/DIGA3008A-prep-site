@@ -82,8 +82,8 @@
 }
 
 .stat-icon {
-  width: 20px;
-  height: 20px;
+  width: 16px;
+  height: 16px;
   object-fit: contain;
   margin-bottom: 0.5rem;
   filter: drop-shadow(0 0 4px rgba(0, 0, 0, 0.5));
