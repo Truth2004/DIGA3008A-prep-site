@@ -33,6 +33,7 @@ nav {
   display: flex;
   gap: 2rem;
   list-style: none;
+  margin: 0 auto; /* center nav links horizontally within the nav */
 }
 
 .nav-links a {
