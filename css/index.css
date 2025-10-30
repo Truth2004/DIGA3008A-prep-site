@@ -168,7 +168,7 @@
 
 .kit-card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
+ box-shadow: 0 0 20px #e0a400;
 }
 
 .kit-card img {
