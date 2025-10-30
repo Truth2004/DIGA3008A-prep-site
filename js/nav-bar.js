@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
   document.getElementById("navbar").innerHTML = `
     <nav class="nav-container">
-      <div class="logo">
+      <div class="logo" alt="Zombie Survival Logo">
         <img src="/DIGA3008A-prep-site/images/hand-gun-logo.png" alt="Zombie Survival Logo">
       </div>
       <ul class="nav-links">
