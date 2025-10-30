@@ -128,9 +128,9 @@ body {
 
 .blog-card {
   display: flex;
-  background: #000;
-  border: 1px solid #222;
-  box-shadow: 0 0 10px #7f5d01;
+  background: #3a3a3a;
+   border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
   overflow: hidden;
   max-width: 900px;
   margin: 2rem auto;
