@@ -67,8 +67,8 @@
   justify-content: center;
   align-items: center;
   color: #fff;
-  padding: 2.2rem 2rem;
-  gap: 4rem;
+  padding: 2rem 2rem;
+  gap: 8rem;
   text-align: center;
   flex-wrap: wrap;
 }
@@ -90,7 +90,7 @@
 }
 
 .stat p {
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: bold;
   color: #e0a400;
   margin: 0 0 0.5rem 0;
