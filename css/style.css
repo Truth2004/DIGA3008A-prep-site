@@ -298,12 +298,12 @@ body {
 
 .search-input:focus {
   outline: none;
-  border-color: #ff4444;
+  border-color:  #e0a400;
   box-shadow: 0 0 5px rgba(255, 68, 68, 0.3);
 }
 
 .search-btn {
-  background: #ff4444;
+  background: #e0a400;
   border: none;
   border-radius: 4px;
   padding: 8px 12px;
@@ -314,7 +314,7 @@ body {
 }
 
 .search-btn:hover {
-  background: #cc0000;
+  background: #846203;
 }
 
 /* Mobile responsiveness */
