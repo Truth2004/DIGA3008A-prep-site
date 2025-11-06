@@ -1,0 +1,118 @@
+/* ====== Base Setup ====== */
+:root {
+  --bg-color: #1e1e1e;
+  --card-bg: #2b2b2b;
+  --text-color: #e0e0e0;
+  --heading-color: #ffffff;
+  --accent-color: #f1b100;
+  --border-color: #3a3a3a;
+  --max-width: 850px;
+  --font-main: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: var(--font-main);
+  line-height: 1.7;
+}
+
+/* ====== General Layout ====== */
+header, main, footer {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+}
+
+/* ====== Header ====== */
+header {
+  border-bottom: 1px solid var(--border-color);
+  text-align: center;
+}
+
+header h1 {
+  color: var(--accent-color);
+  font-size: 2rem;
+  margin-bottom: 0.75rem;
+}
+
+header p {
+  color: #cccccc;
+  margin-bottom: 0.5rem;
+}
+
+/* ====== Section Cards ====== */
+section {
+  background-color: var(--card-bg);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+  padding: 1.5rem 2rem;
+  margin-bottom: 2rem;
+  border-left: 4px solid var(--accent-color);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+section:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.5);
+}
+
+/* ====== Headings ====== */
+h2 {
+  color: var(--accent-color);
+  font-size: 1.5rem;
+  margin-top: 1rem;
+  margin-bottom: 0.75rem;
+}
+
+h3 {
+  color: var(--heading-color);
+  font-size: 1.1rem;
+  margin-top: 1rem;
+  margin-bottom: 0.4rem;
+}
+
+/* ====== Paragraphs ====== */
+p {
+  font-size: 1rem;
+  color: var(--text-color);
+  margin-bottom: 1rem;
+}
+
+/* ====== Links ====== */
+a {
+  color: var(--accent-color);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* ====== Footer ====== */
+footer {
+  text-align: center;
+  color: #aaaaaa;
+  font-size: 0.9rem;
+  border-top: 1px solid var(--border-color);
+  padding-top: 1.5rem;
+  margin-top: 3rem;
+}
+
+/* ====== Responsive ====== */
+@media (max-width: 768px) {
+  header, main, footer {
+    padding: 1rem;
+  }
+
+  section {
+    padding: 1.25rem;
+  }
+
+  header h1 {
+    font-size: 1.6rem;
+  }
+}
