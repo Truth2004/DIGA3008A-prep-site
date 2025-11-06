@@ -184,9 +184,15 @@ body {
 .kits {
   position: relative;
   z-index: 2;
-  background: url("../images/concrete-background.jpeg") center/cover no-repeat;
+  background: url("../images/blank-concrete-wall.jpg") center/cover no-repeat;
   padding: 3rem 2rem;
   text-align: center;
+  background-image: url('../images/blank-concrete-wall.jpg'); /* Update path to your image */
+  background-size: cover;      /* Make the image cover the entire section */
+  background-repeat: no-repeat; /* Prevent tiling */
+  background-position: center;  /* Center the image */
+  background-blend-mode: overlay; /* Optional: blend with dark color */
+  background-color: rgba(69, 69, 69, 0.8); /* Dark overlay for readability */
 }
 
 .kits::before {

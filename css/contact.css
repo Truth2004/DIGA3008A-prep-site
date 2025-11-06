@@ -14,6 +14,14 @@
   flex-direction: column;
   align-items: center;
   padding: 3rem 1rem;
+
+  /* Concrete wall background */
+  background-image: url('../images/blank-concrete-wall.jpg'); /* Update path to your image */
+  background-size: cover;      /* Make the image cover the entire section */
+  background-repeat: no-repeat; /* Prevent tiling */
+  background-position: center;  /* Center the image */
+  background-blend-mode: overlay; /* Optional: blend with dark color */
+  background-color: rgba(14, 14, 14, 0.8); /* Dark overlay for readability */
 }
 
 .contact-header {
