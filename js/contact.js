@@ -26,7 +26,8 @@ function validateInput(input) {
     showFeedback(input, valid ? "" : "Name must be at least 2 characters.", valid);
   } 
   else if (input.id === "email") {
-    const regex = /^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/;
+    // ✅ Fixed regex (removed double escaping)
+    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     valid = regex.test(value);
     showFeedback(input, valid ? "" : "Enter a valid email address.", valid);
   } 
