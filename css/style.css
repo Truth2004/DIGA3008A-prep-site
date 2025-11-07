@@ -192,7 +192,7 @@ body {
   background-repeat: no-repeat; 
   background-position: center; 
   background-blend-mode: overlay; 
-  background-color: rgba(69, 69, 69, 0.8); 
+  background-color: rgba(43, 43, 43, 0.8);
 }
 
 .kits::before {
