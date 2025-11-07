@@ -1,7 +1,7 @@
 :root {
   --bg-color: #0f0f0f;
   --text-color: #ffffff;
-  --heading-color:  #ffffff;
+  --heading-color: #ffffff;
   --accent-color: #e0a400;
   --paper-color: #3a3a3a;
   --max-width: 900px;
@@ -54,7 +54,6 @@ body {
 /* ====== Sections ====== */
 .blog-content section {
   background: var(--paper-color);
-  border: #3a3a3a;
   border-radius: 8px;
   margin: 2rem 0;
   padding: 1.5rem 2rem;
@@ -112,16 +111,34 @@ section strong {
 
 /* ====== Intro Section ====== */
 .intro {
-  background: rgba(255,255,255,0.02);
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  background: rgba(255,255,255,0.03);
   border: 1px dashed rgba(255,255,255,0.08);
   padding: 2rem;
   border-radius: 10px;
   margin-bottom: 3rem;
+  box-shadow: 0 0 15px rgba(0,0,0,0.4);
+}
+
+.intro img.hero-img {
+  flex: 1 1 350px;
+  max-width: 450px;
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+  filter: sepia(40%) contrast(90%) brightness(85%);
 }
 
 .intro p {
+  flex: 1 1 300px;
   font-size: 1.1rem;
   color: #ffffff;
+  line-height: 1.8;
 }
 
 /* ====== Footer ====== */
@@ -146,5 +163,19 @@ footer {
 
   .kit-img {
     max-height: 200px;
+  }
+
+  .intro {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .intro img.hero-img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .intro p {
+    font-size: 1rem;
   }
 }
