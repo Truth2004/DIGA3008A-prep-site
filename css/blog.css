@@ -43,15 +43,19 @@ body {
   margin-bottom: 0.5rem;
 }
 
-/* ====== Blog Sections ====== */
+/* ====== Blog Sections Spacing ====== */
 .blog-content section {
   background-color: var(--card-bg);
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
   padding: 1.5rem 2rem;
-  margin-bottom: 2rem;
+  margin: 2rem 0; /* increased vertical spacing */
   border-left: 4px solid var(--accent-color);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.blog-content section + section {
+  margin-top: 3rem; /* extra spacing between consecutive sections */
 }
 
 .blog-content section:hover {
