@@ -92,18 +92,3 @@ document.addEventListener("DOMContentLoaded", () => {
   }, "-=0.5"); 
 });
 
-document.addEventListener("DOMContentLoaded", () => {
-  gsap.registerPlugin(MotionPathPlugin);
-
-  gsap.to(".contact-flyer", {
-    duration: 10,
-    repeat: -1,
-    ease: "power1.inOut",
-    motionPath: {
-      path: "#contactPath",
-      align: "#contactPath",
-      autoRotate: true,
-      alignOrigin: [0.5, 0.5]
-    }
-  });
-});
