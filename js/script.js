@@ -242,12 +242,12 @@ document.addEventListener("DOMContentLoaded", () => {
     
     return {
       overallRisk,
-      tips: tips.slice(0, 4), // Limit to 4 most important tips
+      tips: tips.slice(0, 4), 
       forecastSummary
     };
   }
 
-  // Debounced search for better UX
+  
   let searchTimeout;
   searchInput.addEventListener('input', () => {
     clearTimeout(searchTimeout);
@@ -277,7 +277,7 @@ document.addEventListener("DOMContentLoaded", () => {
     searchResults.style.display = 'none';
   }
 
-  // Close results when clicking outside
+  
   document.addEventListener('click', (e) => {
     if (!e.target.closest('.nav-search')) {
       hideResults();

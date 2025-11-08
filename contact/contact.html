@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/MotionPathPlugin.min.js" defer></script>
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/contact.css">
@@ -16,10 +15,22 @@
 
 <body>
     <header>
-        <div id="navbar"></div> <!-- JS will inject navigation here -->
+        <div id="navbar"></div>
     </header>
 
     <main class="contact-main">
+
+        <svg id="contactPathSVG" viewBox="0 0 400 200" width="0" height="0">
+
+            <path id="contactPath" d="M 50,100 
+                     C 50,20 150,20 200,100 
+                     C 250,180 350,180 350,100 
+                     C 350,20 250,20 200,100 
+                     C 150,180 50,180 50,100 Z" fill="none" stroke="none" />
+        </svg>
+
+        <img src="../images/drone.png" alt="Scouting the area" class="contact-flyer">
+
         <section class="contact-header">
             <h1>Contact the Survivors’ Network</h1>
             <p>Have tips, questions, or need help preparing for the apocalypse? Send us a message!</p>

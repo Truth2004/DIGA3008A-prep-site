@@ -11,12 +11,12 @@ document.addEventListener("DOMContentLoaded", () => {
       { innerText: 0 },
       { 
         innerText: target,
-        duration: 10, // animation speed
+        duration: 10, 
         ease: "power2.out",
-        snap: { innerText: 1 }, // ensures whole numbers
+        snap: { innerText: 1 },
         scrollTrigger: {
           trigger: counter,
-          start: "top 80%", // when 80% of viewport reaches the stat
+          start: "top 80%",
           toggleActions: "play none none none"
         },
         onUpdate: function() {
@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", () => {
       y: 0, 
       duration: 1.5, 
       ease: "power3.out", 
-      stagger: 0.25 // delays each element slightly
+      stagger: 0.25 
     }
   );
 });

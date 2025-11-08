@@ -123,3 +123,12 @@ input.success-state, textarea.success-state {
   margin-top: 1rem;
   font-weight: bold;
 }
+
+.contact-flyer {
+  position: absolute;
+  top: 120px; /* Adjust to move the loop up/down */
+  left: 0;
+  width: 60px;
+  pointer-events: none;
+  z-index: 10;
+}

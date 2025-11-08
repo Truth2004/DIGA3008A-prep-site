@@ -26,7 +26,7 @@ function validateInput(input) {
     showFeedback(input, valid ? "" : "Name must be at least 2 characters.", valid);
   } 
   else if (input.id === "email") {
-    // ✅ Fixed regex (removed double escaping)
+ 
     const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     valid = regex.test(value);
     showFeedback(input, valid ? "" : "Enter a valid email address.", valid);
@@ -39,12 +39,12 @@ function validateInput(input) {
   return valid;
 }
 
-// Real-time validation
+
 inputs.forEach(input => {
   input.addEventListener("input", () => validateInput(input));
 });
 
-// On submit
+
 form.addEventListener("submit", e => {
   e.preventDefault();
   let allValid = true;
@@ -68,7 +68,7 @@ form.addEventListener("submit", e => {
 });
 
 document.addEventListener("DOMContentLoaded", () => {
-  // create a timeline instead of individual tweens
+
   const tl = gsap.timeline();
 
   tl.from(".contact-container", {
@@ -83,11 +83,27 @@ document.addEventListener("DOMContentLoaded", () => {
     duration: 0.8,
     ease: "power3.out",
     stagger: 0.2
-  }, "-=1.0") // start a bit earlier to overlap
+  }, "-=1.0") 
   .from(".submit-btn", {
     opacity: 0,
     y: 20,
     duration: 0.8,
     ease: "power3.out"
-  }, "-=0.5"); // overlap slightly
+  }, "-=0.5"); 
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  gsap.registerPlugin(MotionPathPlugin);
+
+  gsap.to(".contact-flyer", {
+    duration: 10,
+    repeat: -1,
+    ease: "power1.inOut",
+    motionPath: {
+      path: "#contactPath",
+      align: "#contactPath",
+      autoRotate: true,
+      alignOrigin: [0.5, 0.5]
+    }
+  });
 });

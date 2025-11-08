@@ -1,12 +1,12 @@
 document.addEventListener("DOMContentLoaded", () => {
   gsap.registerPlugin(ScrollTrigger);
 
-  // Initial state
+ 
   gsap.set(".kit-card", { opacity: 0, y: 150 });
 
-  // Animate each card once
+ 
   ScrollTrigger.batch(".kit-card", {
-    interval: 0.1,      // batch interval
+    interval: 0.1,     
     start: "top 90%",
     onEnter: batch => {
       gsap.to(batch, { 
@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
         stagger: 0.15 
       });
     },
-    // Remove other callbacks so animation doesn't reverse
+    
   });
 });
 
@@ -25,12 +25,12 @@ document.addEventListener("DOMContentLoaded", () => {
 document.addEventListener("DOMContentLoaded", () => {
   gsap.registerPlugin(ScrollTrigger);
 
-  // Initial state
+ 
   gsap.set(".blog-card", { autoAlpha: 0, x: -150, willChange: "opacity, transform" });
 
-  // Scroll-triggered batch animation
+  
   ScrollTrigger.batch(".blog-card", {
-    interval: 0.05, // more frequent batching for smoother feel
+    interval: 0.05,
     start: "top 85%",
     end: "bottom 15%",
     onEnter: batch => gsap.to(batch, {
@@ -67,14 +67,14 @@ document.addEventListener("DOMContentLoaded", () => {
 document.addEventListener("DOMContentLoaded", () => {
   gsap.registerPlugin(ScrollTrigger);
 
-  // Set initial state for all sections (invisible)
+  
   gsap.set(".blog-content section", { autoAlpha: 0, y: 50, willChange: "opacity, transform" });
 
   ScrollTrigger.batch(".blog-content section", {
-    start: "top 90%",   // trigger when section is near entering viewport
-    end: "bottom 10%",  // trigger when section is near leaving viewport
+    start: "top 90%",   
+    end: "bottom 10%",  
 
-    // scrolling down: fade in from bottom
+    
     onEnter: batch => gsap.to(batch, {
       autoAlpha: 1,
       y: 0,
@@ -83,7 +83,7 @@ document.addEventListener("DOMContentLoaded", () => {
       stagger: 0.2
     }),
 
-    // scrolling down: fade out upward
+    
     onLeave: batch => gsap.to(batch, {
       autoAlpha: 0,
       y: -50,
@@ -92,7 +92,7 @@ document.addEventListener("DOMContentLoaded", () => {
       stagger: 0.1
     }),
 
-    // scrolling up: fade in from top
+    
     onEnterBack: batch => gsap.to(batch, {
       autoAlpha: 1,
       y: 0,
@@ -101,7 +101,7 @@ document.addEventListener("DOMContentLoaded", () => {
       stagger: 0.2
     }),
 
-    // scrolling up: fade out downward
+    
     onLeaveBack: batch => gsap.to(batch, {
       autoAlpha: 0,
       y: 50,
