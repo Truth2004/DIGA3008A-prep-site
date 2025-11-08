@@ -1,42 +1,42 @@
 document.addEventListener("DOMContentLoaded", () => {
+  gsap.registerPlugin(ScrollTrigger);
+
   const counters = document.querySelectorAll(".stat p");
-  const duration = 15000; // 5 seconds
-  const frameRate = 60;  // 60 frames per second
-  let started = false;   // to prevent re-triggering
 
-  const startCounting = () => {
-    if (started) return;
-    started = true;
+  counters.forEach(counter => {
+    const target = +counter.textContent.replace(/,/g, "");
+    counter.textContent = "0";
 
-    counters.forEach(counter => {
-      const target = +counter.textContent.replace(/,/g, "");
-      counter.textContent = "0";
-      let current = 0;
-      const increment = target / (duration / (1000 / frameRate));
-
-      const updateCounter = () => {
-        current += increment;
-        if (current >= target) {
-          counter.textContent = target.toLocaleString();
-        } else {
-          counter.textContent = Math.floor(current).toLocaleString();
-          requestAnimationFrame(updateCounter);
+    gsap.fromTo(counter, 
+      { innerText: 0 },
+      { 
+        innerText: target,
+        duration: 10, // animation speed
+        ease: "power2.out",
+        snap: { innerText: 1 }, // ensures whole numbers
+        scrollTrigger: {
+          trigger: counter,
+          start: "top 80%", // when 80% of viewport reaches the stat
+          toggleActions: "play none none none"
+        },
+        onUpdate: function() {
+          counter.textContent = Math.floor(counter.innerText).toLocaleString();
         }
-      };
-
-      requestAnimationFrame(updateCounter);
-    });
-  };
-
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        startCounting();
-        observer.disconnect(); // stop observing once triggered
       }
-    });
-  }, { threshold: 0.3 }); // triggers when 30% of the section is visible
+    );
+  });
+});
 
-  const statsSection = document.querySelector(".stats");
-  if (statsSection) observer.observe(statsSection);
+document.addEventListener("DOMContentLoaded", () => {
+  gsap.fromTo(
+    ".hero-content *",
+    { opacity: 0, y: 150 },
+    { 
+      opacity: 1, 
+      y: 0, 
+      duration: 1.5, 
+      ease: "power3.out", 
+      stagger: 0.25 // delays each element slightly
+    }
+  );
 });
