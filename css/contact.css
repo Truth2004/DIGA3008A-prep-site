@@ -31,7 +31,7 @@
 }
 
 .contact-header h1 {
-  color: #d4af37; /* gold accent */
+  color: #d4af37;
   font-size: 2.5rem;
   margin-bottom: 1rem;
 }
@@ -126,7 +126,7 @@ input.success-state, textarea.success-state {
 
 .contact-flyer {
   position: absolute;
-  top: 120px; /* Adjust to move the loop up/down */
+  top: 120px;
   left: 0;
   width: 60px;
   pointer-events: none;

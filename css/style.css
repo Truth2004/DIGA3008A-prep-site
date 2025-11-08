@@ -87,7 +87,7 @@ nav {
   }
 }
 
-/* FOOTER FIX  */
+/* FOOTER */
 footer {
   background: #111;
   color: #fff;
@@ -239,9 +239,9 @@ body {
   overflow: hidden;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
   transition: transform 0.3s, box-shadow 0.3s;
-  opacity: 0;                /* start invisible */
-  transform: translateY(150px); /* start lower */
-  will-change: transform, opacity; /* optimize for animation */
+  opacity: 0;                
+  transform: translateY(150px); 
+  will-change: transform, opacity; 
 }
 
 .kit-card:hover {
@@ -336,11 +336,11 @@ body {
     width: 100%;
     justify-content: center;
     margin-top: 10px;
-    display: none; /* Hidden by default on mobile */
+    display: none; 
   }
   
   .nav-search.nav-open {
-    display: flex; /* Show when menu is open */
+    display: flex; 
   }
   
   .search-input {

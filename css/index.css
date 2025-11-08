@@ -1,4 +1,4 @@
-/* ===== HERO SECTION ===== */
+/* HERO SECTION */
 .hero {
   position: relative;
   height: 100vh;
@@ -58,7 +58,7 @@
   background: #f5c400;
 }
 
-/* ===== STATS SECTION ===== */
+/* STATS SECTION */
 .stats {
   position: relative;
   z-index: 2;

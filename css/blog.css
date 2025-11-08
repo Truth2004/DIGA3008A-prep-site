@@ -1,4 +1,4 @@
-/* ====== Base Setup ====== */
+/* Base Setup */
 :root {
   --bg-color: #1e1e1e;
   --card-bg: #2b2b2b;
@@ -22,14 +22,14 @@ body {
     url('../images/concrete-wall-texture.jpg') center center / cover no-repeat fixed;
 }
 
-/* ====== Blog Layout Wrapper ====== */
+/* Blog Layout Wrapper */
 .blog-content {
   max-width: var(--max-width);
   margin: 0 auto;
   padding: 2rem 1.5rem;
-  padding-top: calc(2rem + 100px); /* add extra space to move content below nav */
+  padding-top: calc(2rem + 100px); 
 }
-/* ====== Blog Header ====== */
+/* Blog Header */
 .blog-content header {
   border-bottom: 1px solid var(--border-color);
   text-align: center;
@@ -46,19 +46,19 @@ body {
   margin-bottom: 0.5rem;
 }
 
-/* ====== Blog Sections Spacing ====== */
+/* Blog Sections Spacing */
 .blog-content section {
   background-color: var(--card-bg);
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
   padding: 1.5rem 2rem;
-  margin: 2rem 0; /* increased vertical spacing */
+  margin: 2rem 0; 
   border-left: 4px solid var(--accent-color);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .blog-content section + section {
-  margin-top: 3rem; /* extra spacing between consecutive sections */
+  margin-top: 3rem; 
 }
 
 .blog-content section:hover {
@@ -66,7 +66,7 @@ body {
   box-shadow: 0 0 35px rgba(193,155,71,0.4);
 }
 
-/* ====== Headings ====== */
+/* Headings */
 .blog-content h2 {
   color: var(--accent-color);
   font-size: 1.5rem;
@@ -81,14 +81,14 @@ body {
   margin-bottom: 0.4rem;
 }
 
-/* ====== Paragraphs ====== */
+/* Paragraphs */
 .blog-content p {
   font-size: 1rem;
   color: var(--text-color);
   margin-bottom: 1rem;
 }
 
-/* ====== Links ====== */
+/* Links */
 .blog-content a {
   color: var(--accent-color);
   text-decoration: none;
@@ -99,7 +99,7 @@ body {
   text-decoration: underline;
 }
 
-/* ====== Blog Footer ====== */
+/* Blog Footer */
 .blog-content footer {
   text-align: center;
   color: #aaaaaa;
@@ -109,7 +109,7 @@ body {
   margin-top: 3rem;
 }
 
-/* ====== Responsive ====== */
+/* Responsive */
 @media (max-width: 768px) {
   .blog-content {
     padding: 1rem;

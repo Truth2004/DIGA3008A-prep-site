@@ -7,7 +7,7 @@
   --max-width: 900px;
 }
 
-/* ====== Base ====== */
+/* Base */
 body {
   margin: 0;
   padding: 0;
@@ -28,7 +28,7 @@ body {
   padding-top: calc(3rem + 75px);
 }
 
-/* ====== Header ====== */
+/*  Header */
 .page-header {
   text-align: center;
   border-bottom: 2px dashed rgba(255,255,255,0.1);
@@ -51,7 +51,7 @@ body {
   font-size: 1rem;
 }
 
-/* ====== Sections ====== */
+/* Sections */
 .blog-content section {
   background: var(--paper-color);
   border-radius: 8px;
@@ -79,7 +79,7 @@ body {
   box-shadow: 0 0 35px rgba(193,155,71,0.4);
 }
 
-/* ====== Images ====== */
+/* Images */
 .kit-img {
   width: 100%;
   max-height: 280px;
@@ -90,7 +90,7 @@ body {
   margin-bottom: 1.3rem;
 }
 
-/* ====== Text ====== */
+/* Text */
 section h2 {
   font-family: 'Oswald', sans-serif;
   color: var(--accent-color);
@@ -109,7 +109,7 @@ section strong {
   color: var(--heading-color);
 }
 
-/* ====== Intro Section ====== */
+/* Intro Section */
 .intro {
   display: flex;
   align-items: center;
@@ -141,7 +141,7 @@ section strong {
   line-height: 1.8;
 }
 
-/* ====== Footer ====== */
+/* Footer */
 footer {
   text-align: center;
   color: #999;
@@ -151,7 +151,7 @@ footer {
   margin-top: 3rem;
 }
 
-/* ====== Responsive ====== */
+/* Responsive */
 @media (max-width: 800px) {
   .page-header h1 {
     font-size: 2rem;
