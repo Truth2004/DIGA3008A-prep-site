@@ -68,31 +68,26 @@ form.addEventListener("submit", e => {
 });
 
 document.addEventListener("DOMContentLoaded", () => {
-  gsap.registerPlugin();
+  // create a timeline instead of individual tweens
+  const tl = gsap.timeline();
 
-  // Animate the contact form container on page load
-  gsap.from(".contact-container", {
+  tl.from(".contact-container", {
     opacity: 0,
-    x: 200,           // start 200px to the right
-    duration: 1.8,    // animation length
+    x: 200,
+    duration: 1.8,
     ease: "power3.out"
-  });
-
-  // Optionally, animate each form element in sequence
-  gsap.from(".form-group", {
+  })
+  .from(".form-group", {
     opacity: 0,
     x: 50,
     duration: 0.8,
     ease: "power3.out",
-    stagger: 0.2,
-    delay: 1.5        // start after container animates in
-  });
-
-  gsap.from(".submit-btn", {
+    stagger: 0.2
+  }, "-=1.0") // start a bit earlier to overlap
+  .from(".submit-btn", {
     opacity: 0,
     y: 20,
     duration: 0.8,
-    ease: "power3.out",
-    delay: 1.2
-  });
+    ease: "power3.out"
+  }, "-=0.5"); // overlap slightly
 });
