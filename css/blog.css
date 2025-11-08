@@ -60,7 +60,7 @@ body {
 
 .blog-content section:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 35px rgba(193,155,71,0.4);
 }
 
 /* ====== Headings ====== */
