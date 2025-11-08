@@ -63,3 +63,51 @@ document.addEventListener("DOMContentLoaded", () => {
     })
   });
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+  gsap.registerPlugin(ScrollTrigger);
+
+  // Set initial state for all sections (invisible)
+  gsap.set(".blog-content section", { autoAlpha: 0, y: 50, willChange: "opacity, transform" });
+
+  ScrollTrigger.batch(".blog-content section", {
+    start: "top 90%",   // trigger when section is near entering viewport
+    end: "bottom 10%",  // trigger when section is near leaving viewport
+
+    // scrolling down: fade in from bottom
+    onEnter: batch => gsap.to(batch, {
+      autoAlpha: 1,
+      y: 0,
+      duration: 1,
+      ease: "power3.out",
+      stagger: 0.2
+    }),
+
+    // scrolling down: fade out upward
+    onLeave: batch => gsap.to(batch, {
+      autoAlpha: 0,
+      y: -50,
+      duration: 0.8,
+      ease: "power3.in",
+      stagger: 0.1
+    }),
+
+    // scrolling up: fade in from top
+    onEnterBack: batch => gsap.to(batch, {
+      autoAlpha: 1,
+      y: 0,
+      duration: 1,
+      ease: "power3.out",
+      stagger: 0.2
+    }),
+
+    // scrolling up: fade out downward
+    onLeaveBack: batch => gsap.to(batch, {
+      autoAlpha: 0,
+      y: 50,
+      duration: 0.8,
+      ease: "power3.in",
+      stagger: 0.1
+    })
+  });
+});
