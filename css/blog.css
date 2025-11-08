@@ -20,7 +20,6 @@ body {
   background: 
     linear-gradient(rgba(34, 34, 34, 0.65), rgba(204,204,204,0.65)),
     url('../images/concrete-wall-texture.jpg') center center / cover no-repeat fixed;
-    padding-top: 75px;
 }
 
 /* ====== Blog Layout Wrapper ====== */
@@ -114,6 +113,7 @@ body {
 @media (max-width: 768px) {
   .blog-content {
     padding: 1rem;
+    padding-top: calc(2rem + 75px); /* extra 75px for small screens */
   }
 
   .blog-content section {
