@@ -24,7 +24,7 @@ body {
   max-width: var(--max-width);
   margin: 0 auto;
   padding: 2rem 1.5rem;
-  padding-top: calc(2rem + 75px); /* add extra space to move content below nav */
+  padding-top: calc(2rem + 100px); /* add extra space to move content below nav */
 }
 /* ====== Blog Header ====== */
 .blog-content header {
